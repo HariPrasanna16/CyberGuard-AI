@@ -1,0 +1,484 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #1e293b;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   GOVERNMENT HEADER
+========================================= */
+
+.gov-header {
+  background: #ffffff;
+  border-bottom: 1px solid #d9dee5;
+}
+
+.gov-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  min-height: 82px;
+  padding: 14px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Government Branding */
+
+.gov-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gov-emblem {
+  width: 52px;
+  height: 52px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+
+  background: #f8fafc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #174ea6;
+}
+
+.gov-brand h1 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.gov-brand p {
+  margin: 3px 0 0;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* Department */
+
+.department-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.department-info strong {
+  font-size: 12px;
+  color: #174ea6;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.department-info span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+
+/* Government Blue Strip */
+
+.blue-strip {
+  height: 4px;
+  background: #174ea6;
+}
+
+
+/* =========================================
+   MAIN AREA
+========================================= */
+
+.login-main {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 430px;
+}
+
+
+/* =========================================
+   PORTAL HEADING
+========================================= */
+
+.portal-heading {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.shield-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  background: #edf4ff;
+  border: 1px solid #d6e5ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #174ea6;
+}
+
+.portal-heading h2 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.portal-heading p {
+  margin: 7px 0 0;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+  background: #ffffff;
+
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 16px rgba(15, 23, 42, 0.06);
+
+  overflow: hidden;
+}
+
+
+/* Card Header */
+
+.card-header {
+  padding: 21px 26px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 650;
+
+  color: #172033;
+}
+
+.card-header p {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+  color: #64748b;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.login-form {
+  padding: 26px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+
+/* Inputs */
+
+.form-group input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 13px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus {
+  border-color: #174ea6;
+
+  box-shadow:
+    0 0 0 3px rgba(23, 78, 166, 0.10);
+}
+
+
+/* Password */
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-left: 42px;
+}
+
+.lock-icon {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #94a3b8;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-button {
+  width: 100%;
+  height: 44px;
+
+  margin-top: 4px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #174ea6;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.login-button:hover {
+  background: #123d82;
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+
+/* =========================================
+   SECURITY NOTICE
+========================================= */
+
+.security-wrapper {
+  padding: 0 26px 25px;
+}
+
+.security-notice {
+  display: flex;
+  gap: 11px;
+
+  padding: 13px;
+
+  background: #f1f6ff;
+
+  border: 1px solid #dbe8fb;
+  border-radius: 5px;
+
+  color: #174ea6;
+}
+
+.security-notice svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.security-notice strong {
+  display: block;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #174ea6;
+}
+
+.security-notice p {
+  margin: 4px 0 0;
+
+  font-size: 10px;
+  line-height: 1.55;
+
+  color: #526b8f;
+}
+
+
+/* =========================================
+   PORTAL FOOTER
+========================================= */
+
+.portal-footer {
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.portal-footer p {
+  margin: 0;
+
+  font-size: 11px;
+  color: #64748b;
+}
+
+.portal-footer span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   BOTTOM FOOTER
+========================================= */
+
+.bottom-footer {
+  background: #ffffff;
+
+  border-top: 1px solid #e2e8f0;
+
+  padding: 12px 20px;
+
+  text-align: center;
+}
+
+.bottom-footer p {
+  margin: 0;
+
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .gov-header-inner {
+    padding: 14px 18px;
+  }
+
+  .department-info {
+    display: none;
+  }
+
+  .gov-brand h1 {
+    font-size: 16px;
+  }
+
+  .gov-brand p {
+    font-size: 12px;
+  }
+
+  .login-main {
+    padding: 35px 16px;
+  }
+
+  .portal-heading h2 {
+    font-size: 22px;
+  }
+
+  .login-card {
+    border-radius: 7px;
+  }
+
+  .card-header,
+  .login-form {
+    padding: 22px;
+  }
+
+  .security-wrapper {
+    padding: 0 22px 22px;
+  }
+}
+

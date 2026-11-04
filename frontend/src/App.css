@@ -1,0 +1,396 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #f5f7fa;
+
+  color: #1e293b;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================
+   TOP NAVBAR
+========================================= */
+
+.app-navbar {
+  height: 64px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #d9dee5;
+
+  position: relative;
+
+  z-index: 100;
+}
+
+
+/* Government blue line */
+
+.app-navbar::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background: #174ea6;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.app-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.app-brand-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf4ff;
+
+  border: 1px solid #d4e3f7;
+
+  border-radius: 5px;
+
+  color: #174ea6;
+}
+
+.app-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.app-brand-text strong {
+  font-size: 14px;
+
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.app-brand-text span {
+  font-size: 9px;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.app-navigation {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+/* Navigation button */
+
+.app-nav-button {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 13px;
+
+  border: 1px solid transparent;
+
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* Hover */
+
+.app-nav-button:hover {
+  background: #f1f5f9;
+
+  color: #334155;
+}
+
+
+/* Active */
+
+.app-nav-button.active {
+  background: #edf4ff;
+
+  border-color: #d2e2f7;
+
+  color: #174ea6;
+}
+
+
+/* Analytics active */
+
+.app-nav-button.active.analytics {
+  background: #f1f5ff;
+
+  border-color: #ddd6fe;
+
+  color: #4338ca;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.nav-divider {
+  width: 1px;
+  height: 28px;
+
+  margin: 0 7px;
+
+  background: #dce2e9;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-button {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 11px;
+
+  border: 1px solid transparent;
+
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #fff1f2;
+
+  border-color: #fecdd3;
+
+  color: #b91c1c;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.app-content {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: #f5f7fa;
+}
+
+
+/* =========================================
+   SECURITY FOOTER
+========================================= */
+
+.security-bar {
+  height: 25px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #dce2e9;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+.security-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.security-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .app-navbar {
+    height: 58px;
+
+    padding: 0 12px;
+  }
+
+  .app-brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .app-brand-text strong {
+    font-size: 12px;
+  }
+
+  .app-brand-text span {
+    display: none;
+  }
+
+  .app-nav-button {
+    width: 38px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+  .app-nav-button span {
+    display: none;
+  }
+
+  .logout-button {
+    width: 38px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+
+  .nav-divider {
+    margin: 0 3px;
+  }
+
+  .security-bar {
+    display: none;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .app-brand-text {
+    display: none;
+  }
+
+  .app-navigation {
+    margin-left: auto;
+  }
+}
